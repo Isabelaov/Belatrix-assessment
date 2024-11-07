@@ -8,11 +8,11 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
 import {ContactListScreen} from './src/screens/ContactListScreen';
 import {CreateUpdateContactScreen} from './src/screens/CreateUpdateContactScreen';
 import { RootStackParams } from './src/interfaces';
 import { ContactScreen } from './src/screens/ContactScreen';
+import { SearchButton } from './src/components/SearchButton';
 
 const Stack = createNativeStackNavigator<RootStackParams>()
 
@@ -23,7 +23,11 @@ function App(): React.JSX.Element {
         <Stack.Screen 
         name='ContactList' 
         component={ ContactListScreen } 
-        options={ { title: 'Contact List', headerTitleAlign: 'center' } }
+        options={ { 
+          title: 'Contact List', 
+          headerTitleAlign: 'center',
+          headerRight: () => <SearchButton/>
+        } }
         />
 
         <Stack.Screen

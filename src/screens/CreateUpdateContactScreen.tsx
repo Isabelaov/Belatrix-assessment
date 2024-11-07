@@ -8,13 +8,12 @@ import { RootStackParams } from '../interfaces'
 import useContacts from '../hooks/useContacts';
 import usePicture from '../hooks/usePicture';
 import { useLocation } from '../hooks/useLocation';
-import { WEATHER_API_KEY } from '@env';
 
 type Props = NativeStackScreenProps<RootStackParams, 'ContactToHandle'>
 const { height } = Dimensions.get('window');
 
 // console.log({GOOGLE_MAPS_API_KEY});
-console.log({WEATHER_API_KEY})
+// console.log({WEATHER_API_KEY})
 
 export const CreateUpdateContactScreen: React.FC<Props> = ({ route, navigation }) => {
   const { createUpdate } = useContacts()
