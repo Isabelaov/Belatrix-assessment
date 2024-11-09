@@ -3,8 +3,8 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 export const SearchButton = () => {
     return (
-        <TouchableOpacity style={styles.container}>
-            <View style={styles.iconWrapper}>
+        <TouchableOpacity style={ styles.container }>
+            <View style={ styles.iconWrapper }>
                 <Icon 
                     name="account-search" 
                     size={30} 
