@@ -12,7 +12,7 @@ export const RegisterUserScreen = ({ navigation, }: { navigation: NavigationProp
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-  const {register} = useAuth()
+  const { register } = useAuth()
 
   const handleRegister = async () => {
     if(!name || !email || !password){

@@ -27,6 +27,7 @@ function App(): React.JSX.Element {
       <Stack.Screen
           name="Login"
           component={ LoginScreen }
+          options={ { headerShown: false } }
       />
 
       <Stack.Screen
