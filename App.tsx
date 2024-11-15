@@ -21,19 +21,22 @@ function App(): React.JSX.Element {
       <Stack.Screen
           name="RegisterUser"
           component={ RegisterUserScreen }
-          options={ { headerShown: false, title: 'Register', } }
+          options={ { headerShown: false } }
       />
 
       <Stack.Screen
           name="Login"
           component={ LoginScreen }
-          options={ { headerShown: false, title: 'Register', } }
       />
 
       <Stack.Screen
           name="CreateUpdateVehicle"
           component={ CreateUpdateVehicle }
-          options={ {  title: 'Create Update Vehicle', } }
+          options={ 
+            {  
+              title: 'Create / Update Vehicle', headerTitleAlign: 'center' 
+            } 
+          }
       />
 
       <Stack.Screen
@@ -45,13 +48,13 @@ function App(): React.JSX.Element {
       <Stack.Screen
           name="MaintenanceList"
           component={CreateUpdateVehicle }
-          options={ { title: 'Maintenance Record', } }
+          options={ { title: 'Maintenance Record', headerTitleAlign: 'center' } }
       />
 
       <Stack.Screen
           name="RegisterMaintenance"
           component={CreateUpdateVehicle }
-          options={ { title: 'Register Maintenance', } }
+          options={ { title: 'Register Maintenance', headerTitleAlign: 'center' } }
       />
 
       </Stack.Navigator>

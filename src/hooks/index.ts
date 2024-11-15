@@ -1,4 +1,4 @@
 export * from './useMaintenance';
-export * from './useUser';
+export * from './useAuth';
 export * from './useVehicle';
 export * from './usePermissions';
