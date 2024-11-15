@@ -4,7 +4,7 @@ import {Maintenance} from './maintenance';
 
 export type RootStackParamList = {
   RegisterUser: {user: User};
-  Login: {email: string; password: string};
+  Login: undefined;
   CreateUpdateVehicle: {vehicleId?: string; vehicle: Vehicle};
   VehicleList: {query?: string};
   MaintenanceList: {query?: string; vehicleId: string};
