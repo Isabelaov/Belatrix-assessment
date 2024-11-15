@@ -8,40 +8,52 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {ContactListScreen} from './src/screens/ContactListScreen';
-import {CreateUpdateContactScreen} from './src/screens/CreateUpdateContactScreen';
-import { RootStackParams } from './src/interfaces';
-import { ContactScreen } from './src/screens/ContactScreen';
-import { SearchButton } from './src/components/SearchButton';
+import { RootStackParamList } from './src/interfaces';
+import { CreateUpdateVehicle, LoginScreen, RegisterUserScreen, VehicleListScreen } from './src/screens';
 
-const Stack = createNativeStackNavigator<RootStackParams>()
+
+const Stack = createNativeStackNavigator<RootStackParamList>()
 
 function App(): React.JSX.Element {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='ContactList'>
-        <Stack.Screen 
-        name='ContactList' 
-        component={ ContactListScreen } 
-        options={ { 
-          title: 'Contact List', 
-          headerTitleAlign: 'center',
-          headerRight: () => <SearchButton/>
-        } }
-        />
+      <Stack.Navigator initialRouteName='RegisterUser'>
+      <Stack.Screen
+          name="RegisterUser"
+          component={ RegisterUserScreen }
+          options={ { headerShown: false, title: 'Register', } }
+      />
 
-        <Stack.Screen
-          name="ContactToHandle"
-          component={ CreateUpdateContactScreen }
-          options={ { title: 'Create or Edit Contact' } }
-        />
+      <Stack.Screen
+          name="Login"
+          component={ LoginScreen }
+          options={ { headerShown: false, title: 'Register', } }
+      />
 
-        <Stack.Screen 
-        name="ContactView"
-        component={ ContactScreen }
-        options={ { title: 'Contact Details' } }
-        />
-        
+      <Stack.Screen
+          name="CreateUpdateVehicle"
+          component={ CreateUpdateVehicle }
+          options={ {  title: 'Create Update Vehicle', } }
+      />
+
+      <Stack.Screen
+          name="VehicleList"
+          component={ VehicleListScreen }
+          options={ { title: 'Vehicles', } }
+      />
+
+      <Stack.Screen
+          name="MaintenanceList"
+          component={CreateUpdateVehicle }
+          options={ { title: 'Maintenance Record', } }
+      />
+
+      <Stack.Screen
+          name="RegisterMaintenance"
+          component={CreateUpdateVehicle }
+          options={ { title: 'Register Maintenance', } }
+      />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
